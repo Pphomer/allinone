@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+
+
+<div class="container" style="margin-top:30px; width:100%">
+    <form action="UploadAlbum" method="post" enctype="multipart/form-data">
+        <ul id="fileset" style="list-style-type: none; padding:0"></ul>
+
+        <br />
+        <div class="col-lg-8" style="padding:20px">
+            <button class="btn btn-primary" type="submit" id="submit">Upload File</button>
+        </div>
+
+    </form>
+
+    <template id="input-file">
+        <li>
+            <div class="col-lg-7">
+                <div class="input-group" style="margin:1px">
+                    <label class="input-group-btn" style="background-color:greenyellow;width:1px">
+                        <span class="btn btn-default"> Browse </span>
+                        <span class="btn btn-default" style="width:90%;display:inline-block;">
+                            <span class="filename" style="float:left;">Choose file</span>
+                            <input type="file" name="files" style="display:none; background-color:blue">
+                        </span>
+                    </label>
+
+                    <span class="input-group-btn">
+                        <button class="btn btn-default delbutton" type="button">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </li>
+    </template>
+
+</div>
+
+
+

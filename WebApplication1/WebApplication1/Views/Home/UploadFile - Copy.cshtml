@@ -1,0 +1,123 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="container" style="margin-top:30px; width:100%">
+    <form asp-controller="Home" asp-action="UploadAlbum" method="post"
+          enctype="multipart/form-data">
+
+        <!--input type="Text" name="Title" placeholder="Title" /-->
+
+        <div class="input-group" style="margin:1px">
+
+            <label class="form-control" style="background-color:green; padding:0px">
+
+                @*<span class="btn btn-default" style="width:300px;background-color:greenyellow">*@
+                @*<span class="filename" style="float:left;">Choose file</span>*@
+                <input type="file" name="files" style="display:none">
+                @*</span>*@
+
+                @*<span class="form-control" style="background-color:greenyellow">*@
+
+                @*<span class="filename" style="float:left;">Choose file</span>
+                <input type="file" name="files" style="display:none; background-color:blue">*@
+                @*</span>*@
+            </label>
+
+            <span class="input-group-btn">
+                <button class="btn btn-default delbutton" type="button">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </span>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="input-group">
+                @*<input type="file" class="form-control" style="display:block" placeholder="Search for...">*@
+                <span class="form-control"></span>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+
+
+        <br />
+
+
+
+        <div class="input-group" style="margin:1px">
+
+            <span class="input-group-btn" style="width:80%; background-color:green">
+                <span class="btn btn-default"> Browse </span>
+                @*<span class="btn btn-default" style="width:300px;background-color:greenyellow">*@
+                @*<span class="filename" style="float:left;">Choose file</span>*@
+                @*<input type="file" name="files" style="display:none; background-color:blue">*@
+                @*</span>*@
+
+                <span class="btn btn-default" style="background-color:greenyellow">
+                    x
+                    @*<span class="filename" style="float:left;">Choose file</span>*@
+                    @*<input type="file" name="files" style="display:none; background-color:blue">*@
+                </span>
+            </span>
+
+            <span class="input-group-btn" style="width:20%">
+                <button class="btn btn-default delbutton" type="button">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+            </span>
+        </div>
+        <br />
+
+        <ul id="fileset" style="list-style-type: none;">
+            <li>
+                <div class="col-lg-8">
+                    <div class="input-group" style="margin:1px">
+
+                        <label class="input-group-btn" style="width:300px;background-color:cornflowerblue">
+                            <span class="btn btn-default"> Browse </span>
+                            <span class="btn btn-default" style="width:300px;background-color:greenyellow">
+                                <span class="filename" style="float:left;">Choose file</span>
+                                <input type="file" name="files" style="display:none; background-color:blue">
+                            </span>
+                        </label>
+
+                        <span class="input-group-btn">
+                            <button class="btn btn-default delbutton" type="button">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <br />
+
+        <ul id="fileset" style="list-style-type: none;">
+            <li>
+                <div class="col-lg-7">
+                    <div class="input-group" style="margin:1px">
+                        <label class="form-control" style="background-color:greenyellow;display:inline-block;overflow:hidden">
+                            <span class="filename" style="float:left;">Choose file</span>
+                            <input type="file" name="files" style="display:none">
+                        </label>
+
+                        <span class="input-group-btn">
+                            <button class="btn btn-default delbutton" type="button">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="col-lg-8" style="padding:20px">
+            <button type="submit" id="submit">Upload File</button>
+        </div>
+
+    </form>
+</div>
+

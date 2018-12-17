@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Home - 複製\**" />
+    <Compile Remove="wwwroot\lib\colorbox\**" />
+    <Content Remove="Views\Home - 複製\**" />
+    <Content Remove="wwwroot\lib\colorbox\**" />
+    <EmbeddedResource Remove="Views\Home - 複製\**" />
+    <EmbeddedResource Remove="wwwroot\lib\colorbox\**" />
+    <None Remove="Views\Home - 複製\**" />
+    <None Remove="wwwroot\lib\colorbox\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitHub" Version="1.13.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="QUnit-MVC" Version="1.6.2" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\UploadFiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\UploadFile_20181202.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Views\Home\UploadFile - Copy.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+</Project>

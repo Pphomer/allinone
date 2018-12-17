@@ -1,0 +1,23 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<form asp-controller="Home" asp-action="UploadAlbum" method="post"
+      enctype="multipart/form-data">
+
+    <div>
+        <input type="Text" name="Title" placeholder="Title"/>
+
+        <ul id="fileset" style="list-style-type: none;">
+        
+            <li > <input type="file" name="files" /> </li>
+        </ul>
+    </div>
+
+
+    <button type="submit" id="submit">Upload File</button>
+    
+</form>
+
+<button id="NewSelectFile"> New </button>

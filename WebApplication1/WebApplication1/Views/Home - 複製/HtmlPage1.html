@@ -1,0 +1,55 @@
+﻿<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    
+<form>
+    <ul id ="fileset">
+        <li class ="fileselect">
+        <input type = "file" class ="file">
+        </li>
+    </ul>
+</form>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $('#fileset').on('change', '.file', function () {
+
+                console.log($(this).val());
+
+                if ($(this).val()) {
+
+                    var newfileselect = $(".fileselect").first().clone();
+
+                    // newfileselect.val("");
+
+                    $("#fileset").append(newfileselect.val(""));
+
+                }
+
+            });
+
+            
+
+
+            //$("input.file").on('change', function () {
+
+            //    console.log($(this).val());
+
+            //    if ($(this).val()) {
+
+            //        $("#fileset").append($(".fileselect").first().clone());
+            //    }
+            //});
+        });
+
+    </script>
+</body>
+</html>
